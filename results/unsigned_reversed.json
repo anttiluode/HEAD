@@ -1,0 +1,750 @@
+{
+  "torch": "2.5.1+cpu",
+  "device": "cpu",
+  "steps": 1400,
+  "batch": 192,
+  "window": 350,
+  "weight": 0.1,
+  "runs": [
+    {
+      "seed": 1,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.9150909185409546,
+        "nmse": 0.004601041786372662,
+        "second_coefficient": -1.1090201139450073
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9720760583877563,
+        "nmse": 0.0004242887662257999,
+        "second_coefficient": -1.032001256942749
+      },
+      "mapping": [
+        5,
+        7,
+        1,
+        3,
+        6,
+        0,
+        4,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        5,
+        7,
+        1,
+        3,
+        6,
+        0,
+        4,
+        2
+      ]
+    },
+    {
+      "seed": 2,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.9145068526268005,
+        "nmse": 0.004812960047274828,
+        "second_coefficient": -1.108492136001587
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.971488893032074,
+        "nmse": 0.00045914153452031314,
+        "second_coefficient": -1.0338633060455322
+      },
+      "mapping": [
+        7,
+        5,
+        0,
+        4,
+        3,
+        6,
+        1,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        7,
+        5,
+        0,
+        4,
+        3,
+        6,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 3,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.9039366841316223,
+        "nmse": 0.009002658538520336,
+        "second_coefficient": -1.1187993288040161
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9706969261169434,
+        "nmse": 0.00047181404079310596,
+        "second_coefficient": -1.0346518754959106
+      },
+      "mapping": [
+        5,
+        1,
+        3,
+        4,
+        2,
+        7,
+        6,
+        0
+      ],
+      "auxiliary_routes_at_cut": [
+        1,
+        1,
+        3,
+        4,
+        2,
+        7,
+        6,
+        0
+      ]
+    },
+    {
+      "seed": 4,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.8967052698135376,
+        "nmse": 0.0092867910861969,
+        "second_coefficient": -1.1262446641921997
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9690250158309937,
+        "nmse": 0.0005385535769164562,
+        "second_coefficient": -1.0371516942977905
+      },
+      "mapping": [
+        2,
+        3,
+        1,
+        4,
+        7,
+        6,
+        0,
+        5
+      ],
+      "auxiliary_routes_at_cut": [
+        3,
+        3,
+        1,
+        4,
+        7,
+        6,
+        0,
+        5
+      ]
+    },
+    {
+      "seed": 5,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.8908569812774658,
+        "nmse": 0.019968613982200623,
+        "second_coefficient": -1.1212843656539917
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9719645380973816,
+        "nmse": 0.00045547971967607737,
+        "second_coefficient": -1.0327749252319336
+      },
+      "mapping": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        1,
+        0,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        4,
+        4,
+        5,
+        6,
+        7,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 6,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 0,
+        "target_weight": 0.0700797513127327,
+        "nmse": 0.8380500078201294,
+        "second_coefficient": 1.632343053817749
+      },
+      "final": {
+        "routes": 0,
+        "target_weight": 0.03105320781469345,
+        "nmse": 0.5485119223594666,
+        "second_coefficient": 3.891751766204834
+      },
+      "mapping": [
+        4,
+        0,
+        5,
+        1,
+        7,
+        3,
+        6,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        4,
+        0,
+        5,
+        1,
+        7,
+        3,
+        6,
+        2
+      ]
+    },
+    {
+      "seed": 7,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.8772239685058594,
+        "nmse": 0.016686858609318733,
+        "second_coefficient": -1.1522599458694458
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9664643406867981,
+        "nmse": 0.0006256765918806195,
+        "second_coefficient": -1.0399296283721924
+      },
+      "mapping": [
+        2,
+        6,
+        7,
+        3,
+        5,
+        0,
+        4,
+        1
+      ],
+      "auxiliary_routes_at_cut": [
+        6,
+        6,
+        7,
+        3,
+        5,
+        0,
+        4,
+        4
+      ]
+    },
+    {
+      "seed": 8,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.9068654775619507,
+        "nmse": 0.00577546888962388,
+        "second_coefficient": -1.1186318397521973
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9718888401985168,
+        "nmse": 0.00044248029007576406,
+        "second_coefficient": -1.0324739217758179
+      },
+      "mapping": [
+        0,
+        6,
+        3,
+        4,
+        7,
+        5,
+        1,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        0,
+        6,
+        3,
+        4,
+        7,
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 9,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.8671612739562988,
+        "nmse": 0.018884187564253807,
+        "second_coefficient": -1.1584523916244507
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9648493528366089,
+        "nmse": 0.000731011270545423,
+        "second_coefficient": -1.042354702949524
+      },
+      "mapping": [
+        7,
+        1,
+        4,
+        5,
+        3,
+        6,
+        2,
+        0
+      ],
+      "auxiliary_routes_at_cut": [
+        1,
+        1,
+        4,
+        5,
+        3,
+        6,
+        2,
+        2
+      ]
+    },
+    {
+      "seed": 10,
+      "mode": "unsigned",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.8656853437423706,
+        "nmse": 0.019392862915992737,
+        "second_coefficient": -1.1669163703918457
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.966195821762085,
+        "nmse": 0.0006770461332052946,
+        "second_coefficient": -1.0434458255767822
+      },
+      "mapping": [
+        4,
+        2,
+        6,
+        1,
+        5,
+        0,
+        7,
+        3
+      ],
+      "auxiliary_routes_at_cut": [
+        2,
+        2,
+        6,
+        1,
+        5,
+        0,
+        7,
+        7
+      ]
+    },
+    {
+      "seed": 1,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 0,
+        "target_weight": 0.06793538480997086,
+        "nmse": 0.8990229964256287,
+        "second_coefficient": 1.062656044960022
+      },
+      "final": {
+        "routes": 0,
+        "target_weight": 0.02915189415216446,
+        "nmse": 0.5337176322937012,
+        "second_coefficient": 3.6823744773864746
+      },
+      "mapping": [
+        5,
+        7,
+        1,
+        3,
+        6,
+        0,
+        4,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        7,
+        1,
+        7,
+        0,
+        4,
+        6,
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 2,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 0,
+        "target_weight": 0.06519461423158646,
+        "nmse": 0.9729955792427063,
+        "second_coefficient": 0.3081413805484772
+      },
+      "final": {
+        "routes": 0,
+        "target_weight": 0.016569308936595917,
+        "nmse": 0.8320512771606445,
+        "second_coefficient": 1.3525112867355347
+      },
+      "mapping": [
+        7,
+        5,
+        0,
+        4,
+        3,
+        6,
+        1,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        1,
+        4,
+        2,
+        6,
+        5,
+        4,
+        7,
+        7
+      ]
+    },
+    {
+      "seed": 3,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 7,
+        "target_weight": 0.6631707549095154,
+        "nmse": 0.2810037434101105,
+        "second_coefficient": -1.1558040380477905
+      },
+      "final": {
+        "routes": 7,
+        "target_weight": 0.8469292521476746,
+        "nmse": 0.20488154888153076,
+        "second_coefficient": -0.9773862957954407
+      },
+      "mapping": [
+        5,
+        1,
+        3,
+        4,
+        2,
+        7,
+        6,
+        0
+      ],
+      "auxiliary_routes_at_cut": [
+        1,
+        5,
+        4,
+        6,
+        7,
+        6,
+        7,
+        6
+      ]
+    },
+    {
+      "seed": 4,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 7,
+        "target_weight": 0.6842895746231079,
+        "nmse": 0.2627432644367218,
+        "second_coefficient": -1.1225481033325195
+      },
+      "final": {
+        "routes": 7,
+        "target_weight": 0.8631717562675476,
+        "nmse": 0.19537535309791565,
+        "second_coefficient": -0.9317454099655151
+      },
+      "mapping": [
+        2,
+        3,
+        1,
+        4,
+        7,
+        6,
+        0,
+        5
+      ],
+      "auxiliary_routes_at_cut": [
+        7,
+        7,
+        4,
+        1,
+        4,
+        4,
+        6,
+        0
+      ]
+    },
+    {
+      "seed": 5,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.7523079514503479,
+        "nmse": 0.07231011986732483,
+        "second_coefficient": -1.3011367321014404
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9575526714324951,
+        "nmse": 0.0010700467973947525,
+        "second_coefficient": -1.0501325130462646
+      },
+      "mapping": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        1,
+        0,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        4,
+        5,
+        4,
+        5,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 6,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 0,
+        "target_weight": 0.06599171459674835,
+        "nmse": 0.8283286690711975,
+        "second_coefficient": 1.6141138076782227
+      },
+      "final": {
+        "routes": 0,
+        "target_weight": 0.03254290670156479,
+        "nmse": 0.5304436683654785,
+        "second_coefficient": 3.9566218852996826
+      },
+      "mapping": [
+        4,
+        0,
+        5,
+        1,
+        7,
+        3,
+        6,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        0,
+        5,
+        4,
+        7,
+        1,
+        7,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 7,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 7,
+        "target_weight": 0.6948332786560059,
+        "nmse": 0.28509649634361267,
+        "second_coefficient": -1.1161119937896729
+      },
+      "final": {
+        "routes": 7,
+        "target_weight": 0.8653325438499451,
+        "nmse": 0.21670058369636536,
+        "second_coefficient": -0.9403364062309265
+      },
+      "mapping": [
+        2,
+        6,
+        7,
+        3,
+        5,
+        0,
+        4,
+        1
+      ],
+      "auxiliary_routes_at_cut": [
+        4,
+        2,
+        6,
+        7,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 8,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 0,
+        "target_weight": 0.07535417377948761,
+        "nmse": 0.9126906991004944,
+        "second_coefficient": 0.9324390292167664
+      },
+      "final": {
+        "routes": 0,
+        "target_weight": 0.02136160060763359,
+        "nmse": 0.5895503759384155,
+        "second_coefficient": 3.2707879543304443
+      },
+      "mapping": [
+        0,
+        6,
+        3,
+        4,
+        7,
+        5,
+        1,
+        2
+      ],
+      "auxiliary_routes_at_cut": [
+        6,
+        3,
+        4,
+        7,
+        5,
+        7,
+        5,
+        1
+      ]
+    },
+    {
+      "seed": 9,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.7674524784088135,
+        "nmse": 0.06504721194505692,
+        "second_coefficient": -1.26944899559021
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9611420035362244,
+        "nmse": 0.0009009685600176454,
+        "second_coefficient": -1.0469573736190796
+      },
+      "mapping": [
+        7,
+        1,
+        4,
+        5,
+        3,
+        6,
+        2,
+        0
+      ],
+      "auxiliary_routes_at_cut": [
+        1,
+        4,
+        5,
+        4,
+        5,
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 10,
+      "mode": "signed",
+      "polarity": -1,
+      "at_cut": {
+        "routes": 8,
+        "target_weight": 0.7696603536605835,
+        "nmse": 0.06279506534337997,
+        "second_coefficient": -1.2778394222259521
+      },
+      "final": {
+        "routes": 8,
+        "target_weight": 0.9615716934204102,
+        "nmse": 0.000882662192452699,
+        "second_coefficient": -1.0496044158935547
+      },
+      "mapping": [
+        4,
+        2,
+        6,
+        1,
+        5,
+        0,
+        7,
+        3
+      ],
+      "auxiliary_routes_at_cut": [
+        2,
+        4,
+        1,
+        6,
+        1,
+        5,
+        0,
+        7
+      ]
+    }
+  ]
+}

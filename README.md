@@ -2,6 +2,8 @@
 
 **Can a head that only reads an average learn to expose a hidden contrast?** Sometimes. On an eight-slot synthetic memory, two of ten default training seeds learned the address and subtraction from target error alone. A matched dot-product attention reader gave the same result. There is also an exact reader that recovers the requested slot's contrast while giving that slot **zero weight in its second reading**.
 
+**Early routing follow-up.** A temporary auxiliary loss at weight 0.25 brought the original task from 2/10 to 10/10 successful seeds and a fresh group from 3/10 to 10/10, on the same labels and update budget. With the target sign reversed, unsigned feedback succeeded on 10/10 seeds and signed feedback on 0/10. The first attempted weight (0.10) reached 8/10 on the original seeds. [Method, controls, and receipts](UNSIGNED.md)
+
 [Why eight heads failed, a local repair, and what happens when the read changes a shared field](CREDIT.md)
 
 ## Where the idea came from
