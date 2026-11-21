@@ -44,7 +44,7 @@ def sample(count, mapping, generator, device):
     return values, target, address
 
 
-def train(seed, mapping, mode, steps, device, initial_sign):
+def train(seed, mapping, mode, steps, device, initial_sign, meter_sd=0.0, exact_noise=False):
     torch.manual_seed(seed)
     model = Reader(len(mapping)).to(device)
     start_weight = model.output.weight[0, 1]
@@ -54,10 +54,17 @@ def train(seed, mapping, mode, steps, device, initial_sign):
     starting_value = start_weight.item()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.012)
     batches = torch.Generator(device=device).manual_seed(7000 + seed)
+    meter_rng = torch.Generator(device=device).manual_seed(27000 + seed)
     for _ in range(steps):
         x, y, _ = sample(192, mapping, batches, device)
         prediction = model(x, mode)
+        if meter_sd and not exact_noise:
+            # A perturbation of the second scalar propagates through the affine decoder.
+            eps = torch.randn(y.shape, generator=meter_rng, device=device)
+            prediction = prediction + model.output.weight[0, 1] * meter_sd * eps
         loss = F.mse_loss(prediction, y)
+        if meter_sd and exact_noise:
+            loss = loss + (meter_sd * model.output.weight[0, 1]).square()
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()

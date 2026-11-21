@@ -72,3 +72,23 @@ CPU is the default. The training script also accepts `--device cuda`. All report
 ## Related attention work
 
 Adaptive selection of later observations is established in [Recurrent Models of Visual Attention](https://arxiv.org/abs/1406.6247). [EfficientViT](https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_EfficientViT_Memory_Efficient_Vision_Transformer_With_Cascaded_Group_Attention_CVPR_2023_paper.pdf) already passes one head's output to a later head. HEAD isolates a narrower question about access to scalar measurements. The algebra explains the absence of an architectural advantage here. It also gives a diagnostic for other experiments: ask whether changing the substrate does anything a different query on the original substrate could not reproduce under the actual access and noise constraints.
+
+## Does noisy training make the head select its target?
+
+We reran the 323-parameter mask reader with the original ten seeds, slot permutations, initializations, clean first read, minibatch streams and 1,400-step training budget. Independent Gaussian noise with standard deviation σ enters the second scalar after its read and before the decoder. Target power is 7/8 in expectation. The sign of the second coefficient remains free. We trained once with sampled perturbations and once with their exact expected loss, sharing the clean baseline. Each cell counts seeds whose top-weight slot was correct on all 8,192 held-out items. This measures routing separately from reconstruction accuracy.
+
+| Training noise SD | Perfect routing, sampled loss | Perfect routing, exact loss | Mean clean NMSE, sampled fit | Mean noisy NMSE, sampled fit |
+|---|---:|---:|---:|---:|
+| 0 | 2/10 | 2/10 | 0.6527 | 0.6527 |
+| 0.05 | 2/10 | 2/10 | 0.6534 | 0.6582 |
+| 0.2 | 2/10 | 2/10 | 0.6762 | 0.7124 |
+| 0.5 | 2/10 | 2/10 | 0.7506 | 0.8083 |
+| 1 | 1/10 | 2/10 | 0.8176 | 0.8834 |
+
+The same two seeds (6 and 8) routed every item correctly from σ=0 through 0.5. Seed 1 illustrates how the other runs usually responded: its second-read coefficient shrank from −1.39 to −0.33 at σ=0.5, with zero correct top-slot choices in both cases. At σ=1 sampled noise did produce a partial change in that seed (about 75% correct), while seed 6 lost perfect routing. Noise alone did not reliably select the direct route.
+
+Noisy NMSE averages over held-out examples and integrates over independent evaluation noise at the corresponding training SD. For an affine decoder with second coefficient b, independent zero-mean meter error adds exactly σ²b² to expected MSE. This term penalizes both signs equally. An ideal direct read has b=1 and the ideal eight-slot complement has b=−7, which explains their 49× noise cost. The optimizer can also reduce its use of the second meter. A failed fit in this comparison is not evidence that it learned the exact complement. These runs measure routing at the end of training, with no claim about convergence at an unlimited training budget.
+
+The biological comparison concerns how separately delivered signals can change a cell's response. In mouse auditory cortex, Zhang et al. found preferential encoding of inferred rule in apical dendrites and sensory stimuli in somata, and found that dendritic inhibition impaired rule-dependent somatic choice coding. HEAD receives its cue as an exact scalar mean, and implements neither dendrites nor feedback spikes. [Zhang et al., Science](https://doi.org/10.1126/science.adz5323)
+
+Run `python noisy_training.py --json results/noisy_training.json` for the full CPU sweep. [Per-seed measurements](results/noisy_training.json)

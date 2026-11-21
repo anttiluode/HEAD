@@ -28,6 +28,21 @@ class AccessTests(unittest.TestCase):
         for left, right in zip(*gradients):
             torch.testing.assert_close(left, right, rtol=1e-10, atol=1e-12)
 
+    def test_noise_penalty_matches_both_meter_perturbations(self):
+        torch.manual_seed(60)
+        model = Reader(8).double()
+        x = torch.randn(13, 8, dtype=torch.float64)
+        y = torch.randn(13, dtype=torch.float64)
+        scalars = []
+        hook = model.output.register_forward_pre_hook(lambda _, args: scalars.append(args[0]))
+        p = model(x)
+        hook.remove()
+        delta = torch.tensor([0.0, 0.2], dtype=x.dtype)
+        losses = [(model.output(scalars[0] + sign*delta).flatten()-y).square().mean()
+                  for sign in (-1, 1)]
+        expected = (p-y).square().mean() + (model.output.weight[0, 1]*0.2).square()
+        torch.testing.assert_close((losses[0] + losses[1])/2, expected)
+
     def test_meter_noise_gain(self):
         for slots in (3, 8, 11):
             result = compare(slots=slots, examples=1024)
