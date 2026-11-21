@@ -1,0 +1,11 @@
+{
+  "slots": 8,
+  "examples": 32768,
+  "seed": 119,
+  "second_read_noise_sd": 0.05,
+  "noiseless_max_disagreement": 8.881784197001252e-16,
+  "direct_mse": 0.002463365596211028,
+  "complement_mse": 0.12070491639243688,
+  "mse_ratio": 49.000000884195394,
+  "predicted_ratio": 49
+}

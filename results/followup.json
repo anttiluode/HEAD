@@ -1,0 +1,141 @@
+{
+  "initial_second_read_sign": "default",
+  "slots": 8,
+  "steps": 1400,
+  "batch": 192,
+  "device": "cpu",
+  "torch": "2.5.1+cpu",
+  "fixed_two_population_nmse": 0.7142857142857143,
+  "runs": [
+    {
+      "seed": 6,
+      "slot_for_each_cue": [
+        4,
+        0,
+        5,
+        1,
+        7,
+        3,
+        6,
+        2
+      ],
+      "examples": 8192,
+      "mask_nmse": 0.0007072921725921333,
+      "attention_nmse": 0.0007072928710840642,
+      "same_weights_max_abs_error": 1.1920928955078125e-06,
+      "shuffled_cue_nmse": 2.0539281368255615,
+      "fixed_two_plus_free_cue_nmse": 0.7076820731163025,
+      "correct_top_slot_fraction": 1.0,
+      "output_weights_first_second": [
+        -1.0417362451553345,
+        1.042335033416748
+      ],
+      "parameters_per_learned_model": 323,
+      "initial_second_read_weight": 0.6284215450286865
+    },
+    {
+      "seed": 7,
+      "slot_for_each_cue": [
+        2,
+        6,
+        7,
+        3,
+        5,
+        0,
+        4,
+        1
+      ],
+      "examples": 8192,
+      "mask_nmse": 0.8231485486030579,
+      "attention_nmse": 0.8231485486030579,
+      "same_weights_max_abs_error": 7.152557373046875e-07,
+      "shuffled_cue_nmse": 1.1702545881271362,
+      "fixed_two_plus_free_cue_nmse": 0.7038566470146179,
+      "correct_top_slot_fraction": 0.0,
+      "output_weights_first_second": [
+        1.41716730594635,
+        -1.40338134765625
+      ],
+      "parameters_per_learned_model": 323,
+      "initial_second_read_weight": -0.19890910387039185
+    },
+    {
+      "seed": 8,
+      "slot_for_each_cue": [
+        0,
+        6,
+        3,
+        4,
+        7,
+        5,
+        1,
+        2
+      ],
+      "examples": 8192,
+      "mask_nmse": 0.0005633177934214473,
+      "attention_nmse": 0.0005633183172903955,
+      "same_weights_max_abs_error": 9.5367431640625e-07,
+      "shuffled_cue_nmse": 2.0094759464263916,
+      "fixed_two_plus_free_cue_nmse": 0.7099575996398926,
+      "correct_top_slot_fraction": 1.0,
+      "output_weights_first_second": [
+        -1.0370818376541138,
+        1.0369075536727905
+      ],
+      "parameters_per_learned_model": 323,
+      "initial_second_read_weight": 0.19472737610340118
+    },
+    {
+      "seed": 9,
+      "slot_for_each_cue": [
+        7,
+        1,
+        4,
+        5,
+        3,
+        6,
+        2,
+        0
+      ],
+      "examples": 8192,
+      "mask_nmse": 0.8099769949913025,
+      "attention_nmse": 0.8099768161773682,
+      "same_weights_max_abs_error": 7.152557373046875e-07,
+      "shuffled_cue_nmse": 1.1738795042037964,
+      "fixed_two_plus_free_cue_nmse": 0.7113149166107178,
+      "correct_top_slot_fraction": 0.0,
+      "output_weights_first_second": [
+        1.4443085193634033,
+        -1.4586702585220337
+      ],
+      "parameters_per_learned_model": 323,
+      "initial_second_read_weight": -0.45679983496665955
+    },
+    {
+      "seed": 10,
+      "slot_for_each_cue": [
+        4,
+        2,
+        6,
+        1,
+        5,
+        0,
+        7,
+        3
+      ],
+      "examples": 8192,
+      "mask_nmse": 0.8037933707237244,
+      "attention_nmse": 0.8037934899330139,
+      "same_weights_max_abs_error": 8.344650268554688e-07,
+      "shuffled_cue_nmse": 1.2018074989318848,
+      "fixed_two_plus_free_cue_nmse": 0.7241440415382385,
+      "correct_top_slot_fraction": 0.0,
+      "output_weights_first_second": [
+        1.4870975017547607,
+        -1.489699125289917
+      ],
+      "parameters_per_learned_model": 323,
+      "initial_second_read_weight": -0.6860961318016052
+    }
+  ]
+}
