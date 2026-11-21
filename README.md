@@ -2,6 +2,8 @@
 
 **Can a head that only reads an average learn to expose a hidden contrast?** Sometimes. On an eight-slot synthetic memory, two of ten default training seeds learned the address and subtraction from target error alone. A matched dot-product attention reader gave the same result. There is also an exact reader that recovers the requested slot's contrast while giving that slot **zero weight in its second reading**.
 
+[Why eight heads failed, a local repair, and what happens when the read changes a shared field](CREDIT.md)
+
 ## Where the idea came from
 
 In [SpaceScreensaver.py](https://github.com/anttiluode/phi-world-theory/blob/main/SpaceScreensaver.py), each singularity has a field. Its mean contributes to the displayed density. Pairwise field dot products, passed through tanh and averaged, modulate force. These are different readings of the same numbers. The code does not implement learned query/key/value attention.
